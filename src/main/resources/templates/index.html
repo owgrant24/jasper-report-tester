@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/webjars/bootstrap/5.3.2/css/bootstrap.min.css"/>
+
+    <title>Jasper Reports Tester</title>
+</head>
+<body>
+
+<div class="container-md">
+    <h4>Jasper Reports Tester</h4>
+    <div class="form-group">
+        <label for="report">Содержимое jrxml-файла:</label>
+        <textarea class="form-control" style="font-size: 14px" id="report" rows="6"></textarea>
+    </div>
+    <div style="margin-top: 10px">
+        <button type="button" class="btn btn-primary btn-sm"
+                onclick="generateTestData()">Подготовить тестовые данные
+        </button>
+        <button type="button" class="btn btn-success btn-sm"
+                onclick="generatePojo()">Подготовить POJO
+        </button>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="output">Вывод:</label>
+        <textarea class="form-control" style="font-size: 14px" id="output" rows="18"></textarea>
+    </div>
+
+    <h4>Примеры тестовых данных</h4>
+    <table class="table small">
+        <thead>
+        <tr>
+            <th>Тип</th>
+            <th>Пример 1</th>
+            <th>Пример 2</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>ФИО</td>
+            <td>Петров Андрей Иванович</td>
+            <td>Макаров Петр Иванович</td>
+        </tr>
+        <tr>
+            <td>Паспорт</td>
+            <td>4012 562123 МВД РОССИИ по Санкт-Петербургу и Ленинградской области 29.11.2022</td>
+            <td>4011 455221 МВД Казахстана 11.11.2021</td>
+        </tr>
+        <tr>
+            <td>Адрес</td>
+            <td>196248 Россия Ленинградская область Московский р-н Санкт-Петербург Партизана-Германа 80 2 3 12</td>
+            <td>192131 Казахстан Нур-Султан, Индустриальный парк, ул. 185А строение № 11</td>
+        </tr>
+        <tr>
+            <td>Телефон</td>
+            <td>8 905 612 33 44</td>
+            <td>8 911 333 22 11</td>
+        </tr>
+        <tr>
+            <td>Дата</td>
+            <td>23 10 2023 г.</td>
+            <td>14 11 2000 г.</td>
+        </tr>
+        <tr>
+            <td>Счёт</td>
+            <td>А12312БС12312313000092</td>
+            <td>Б12937123712319238992131</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript" src="/webjars/axios/1.5.0/dist/axios.min.js"></script>
+<script type="text/javascript" src="/webjars/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/webjars/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
